@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from 'prop-types';
 
 export function Cards(props) {
     return (
@@ -12,7 +13,7 @@ export function Cards(props) {
                         <div class="card-body">
                             <img class="card-img-top" src="https://picsum.photos/200/100" alt="Card image" />
 
-                            <h5 class="card-title">Special title treatment</h5>
+                            <h5 class="card-title">{props.title}</h5>
                             <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
                             <a href="#" class="btn btn-primary">Go somewhere</a>
                         </div>
@@ -24,4 +25,15 @@ export function Cards(props) {
             </div>
         </div>
     )
+}
+
+
+Cards.propTypes ={
+    headerText :PropTypes.string.isRequired,
+    title:PropTypes.string.isRequired
+}
+
+Cards.defaultProps ={
+    headerText : "Card Header text here",
+    title:"Card Title here"
 }

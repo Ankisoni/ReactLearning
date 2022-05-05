@@ -7,7 +7,8 @@ function App() {
   return (
     <>
     <Navbar/>
-    <Cards headerText="Card Header"/>
+    {/* <Cards headerText="Card Header" title="Card Title"/> */}
+    <Cards/>
     </>
   );
 }
